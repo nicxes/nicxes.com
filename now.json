@@ -1,0 +1,6 @@
+{
+  "alias": ["nicxes.com"],
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ]
+}
