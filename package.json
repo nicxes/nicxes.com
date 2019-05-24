@@ -1,0 +1,25 @@
+{
+  "name": "nicxes",
+  "version": "1.0.0",
+  "description": "Personal website using next.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicxes/nicxes.com.git"
+  },
+  "author": "Nicolás Miranda <hello@nicxes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicxes/nicxes.com/issues"
+  },
+  "homepage": "https://github.com/nicxes/nicxes.com#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
