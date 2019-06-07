@@ -1,34 +1,49 @@
-import Head from 'next/head'
+import Page from '../components/page'
 
-function HelloWorld() {
+import Navbar from '../components/navbar'
+
+function Home() {
   return (
-    <div>
+    <>
+      <Navbar/>
+      <Page>
+        <main className="main">
 
-      <Head>
-        <title>Nicolás Miranda</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+          <div className="container">
+            <h1>History</h1>
+            <p><span className="date">06/2019:</span> <a href="https://aerolab.now.sh">Coding Challenge</a> — Aerolab's Coding Challenge using anything I want.</p>
+            <p><span className="date">12/2018:</span> <a href="https://blackwatch.now.sh">Blackwatch</a> — A self-hosted personal bot for Discord, friendly design and very simple lightweight bot.</p>
+            <p><span className="date">05/2018:</span> <a href="https://boopix.com">Boopix</a> — A photo marketplace that allows users to print his own photos.</p>
+          </div>
 
-      <main className="hello">
-        <img src="../static/logo.svg"/>
-      </main>
+        </main>
+      </Page>
 
-      <style global jsx>{`
-        body {
-          background: black;
-          margin: 0;
-        }
-        .hello {
+      <style jsx>{`
+        .main {
+          height: calc(100vh - 50px);
+
           display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           justify-content: center;
-          align-items: center;
-
-          height: 100vh;
+        }
+        .main p {
+          font-family: Monospace;
+          line-height: 20px;
+          margin: 0 0 5px 0;
+        }
+        .main p a {
+          color: #fff;
+          text-decoration: none;
+          border-bottom: 1px solid #333;
+        }
+        .main p .date {
+          color: #845dde;
         }
       `}</style>
-
-    </div>
+    </>
   )
 }
 
-export default HelloWorld;
+export default Home
