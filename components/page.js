@@ -29,6 +29,8 @@ function Page ({ title, description, children }) {
         h1, h2, h3, h4, h5, h6 {
           color: #fff;
           font-family: -apple-system, BlinkMacSystemFont, "SF Display", sans-serif;
+
+          margin: 0 0 10px 0;
         }
         .container {
           max-width: 1000px;
