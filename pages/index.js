@@ -22,7 +22,7 @@ function Home() {
       <style jsx>{`
         .main {
           height: 100vh;
-          overflow: hidde;
+          overflow: hidden;
 
           display: flex;
           flex-direction: column;
