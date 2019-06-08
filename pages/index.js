@@ -21,11 +21,11 @@ function Home() {
 
       <style jsx>{`
         .main {
-          height: calc(100vh - 50px);
+          height: 100vh;
+          overflow: hidde;
 
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
           justify-content: center;
         }
         .main p {
