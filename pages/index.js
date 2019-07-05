@@ -12,17 +12,17 @@ function Home() {
         <main className="container">
           
           <header className="head">
-            <img src="/static/logo.png" className="avatar"/>
+            <img src="/static/logo.png" alt="Nicxes" className="avatar"/>
             <h1 className="name">Nicxes</h1>
           </header>
 
-          <nav className="navigation">
+          <ul className="navigation">
             <li><Link href="/who"><a>🧐 Who I am?</a></Link></li>
             <li><Link href="/oss"><a>💼 OSS Contributions</a></Link></li>
             <li><Link href="/press"><a>📰 Press</a></Link></li>
             <li><Link href="/education"><a>🎓 Education</a></Link></li>
             <li><Link href="/information"><a>👀 Information</a></Link></li>
-          </nav>
+          </ul>
 
           <footer className="footer">
             <p>Got more questions?<br/>
@@ -55,6 +55,10 @@ function Home() {
           margin: 20px 0 0 0;
         }
         
+        .navigation {
+          padding: 0;
+          margin: 0;
+        }
         .navigation li {
           list-style: none;
           transition: 0.1s all ease-in;
