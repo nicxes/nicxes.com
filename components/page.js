@@ -32,6 +32,12 @@ function Page ({ title, description, children }) {
 
           margin: 0 0 10px 0;
         }
+        a {
+          color: #222;
+          text-decoration: none;
+        
+          transition: 0.1s all ease-in;
+        }
         .container {
           max-width: 900px;
           margin: 0 auto;
