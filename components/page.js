@@ -23,11 +23,11 @@ function Page ({ title, description, children }) {
           color: #999;
           font-family: -apple-system, BlinkMacSystemFont, "SF Text", sans-serif;
 
-          background: #000;
+          background: #fff;
           margin: 0;
         }
         h1, h2, h3, h4, h5, h6 {
-          color: #fff;
+          color: #222;
           font-family: -apple-system, BlinkMacSystemFont, "SF Display", sans-serif;
 
           margin: 0 0 10px 0;
