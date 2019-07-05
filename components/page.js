@@ -33,7 +33,7 @@ function Page ({ title, description, children }) {
           margin: 0 0 10px 0;
         }
         .container {
-          max-width: 1000px;
+          max-width: 900px;
           margin: 0 auto;
 
           padding: 0 20px;
