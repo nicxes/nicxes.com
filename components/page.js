@@ -12,6 +12,8 @@ function Page ({ title, description, children }) {
         
         <meta name="theme-color" content="#000000"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
         
         <link href="https://sf.abarba.me/font.css" rel="stylesheet"/>
       </Head>
