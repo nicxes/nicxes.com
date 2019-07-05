@@ -38,6 +38,12 @@ function Page ({ title, description, children }) {
 
           padding: 0 20px;
         }
+        .container-fluid {
+          max-width: 90%;
+          margin: 0 auto;
+
+          padding: 0 20px;
+        }
       `}</style>
     </div>
   )
