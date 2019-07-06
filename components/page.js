@@ -41,7 +41,7 @@ function Page ({ title, description, children }) {
           transition: 0.1s all ease-in;
         }
         .container {
-          max-width: 700px;
+          max-width: 600px;
           margin: 0 auto;
 
           padding: 0 20px;
@@ -51,10 +51,6 @@ function Page ({ title, description, children }) {
           margin: 0 auto;
 
           padding: 0 20px;
-        }
-        main {
-          position: relative;
-          padding: 120px 20px 0 20px !important;
         }
       `}</style>
     </div>

@@ -10,29 +10,39 @@ export default function Home() {
       <Navbar/>
 
       <Page title="Nicxes — Homepage">
-        <main className="container">
-          
-          <header>
-            <Logo size="140"/>
-            <h1 className="name">Nicxes</h1>
-          </header>
+        <main>
+          <div className="container">
 
-          <ul className="navigation">
-            <li><Link href="/who"><a>🧐 Who I am?</a></Link></li>
-            <li><Link href="/oss"><a>💼 OSS Contributions</a></Link></li>
-            <li><Link href="/press"><a>📰 Press</a></Link></li>
-            <li><Link href="/education"><a>🎓 Education</a></Link></li>
-            <li><Link href="/information"><a>👀 Information</a></Link></li>
-          </ul>
+            <header>
+              <Logo size="140"/>
+              <h1 className="name">Nicxes</h1>
+            </header>
 
-          <footer>
-            <p>Got more questions? <br/> Email me at <a href="mailto:hello@nicxes.com">hello@nicxes.com</a></p>
-          </footer>
+            <ul className="navigation">
+              <li><Link href="/who"><a>🧐 Who I am?</a></Link></li>
+              <li><Link href="/oss"><a>💼 OSS Contributions</a></Link></li>
+              <li><Link href="/press"><a>📰 Press</a></Link></li>
+              <li><Link href="/education"><a>🎓 Education</a></Link></li>
+              <li><Link href="/information"><a>👀 Information</a></Link></li>
+            </ul>
 
+            <footer>
+              <p>Got more questions? <br/> Email me at <a href="mailto:hello@nicxes.com">hello@nicxes.com</a></p>
+            </footer>
+
+          </div>
         </main>
       </Page>
 
       <style jsx>{`
+        main {
+          position: relative;
+          height: 100vh;
+          
+          display: flex;
+          align-items: center;
+        }
+        main .container {width: 100%;}
         header {
           position: relative;
           padding: 20px 0;
@@ -42,7 +52,7 @@ export default function Home() {
           font-size: 36px;
           font-weight: bold;
 
-          margin: 20px 0 0 0;
+          margin: 12px 0 0 0;
         }
         
         .navigation {
