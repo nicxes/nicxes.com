@@ -12,7 +12,7 @@ export default function Home() {
       <Page title="Nicxes — Homepage">
         <main className="container">
           
-          <header className="head">
+          <header>
             <Logo size="140"/>
             <h1 className="name">Nicxes</h1>
           </header>
@@ -25,21 +25,19 @@ export default function Home() {
             <li><Link href="/information"><a>👀 Information</a></Link></li>
           </ul>
 
-          <footer className="footer">
-            <p>Got more questions?<br/>
-              Email me at <a href="mailto:hello@nicxes.com">hello@nicxes.com</a>
-            </p>
+          <footer>
+            <p>Got more questions? <br/> Email me at <a href="mailto:hello@nicxes.com">hello@nicxes.com</a></p>
           </footer>
 
         </main>
       </Page>
 
       <style jsx>{`
-        .head {
+        header {
           position: relative;
           padding: 20px 0;
         }
-        .head .name {
+        header .name {
           color: #000;
           font-size: 36px;
           font-weight: bold;
