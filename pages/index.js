@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Page from '../components/page'
 import Navbar from '../components/navbar'
+import Logo from '../components/logo'
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
         <main className="container">
           
           <header className="head">
-            <img src="/static/logo.png" alt="Nicxes" className="avatar"/>
+            <Logo size="140"/>
             <h1 className="name">Nicxes</h1>
           </header>
 
@@ -36,16 +37,11 @@ function Home() {
       <style jsx>{`
         main {
           position: relative;
-          
           padding: 120px 20px 0 20px;
         }
         main .head {
           position: relative;
           padding: 20px 0;
-        }
-        main .head .avatar {
-          width: 140px;
-          height: 140px;
         }
         main .head .name {
           color: #000;
