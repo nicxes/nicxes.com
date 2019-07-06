@@ -52,6 +52,10 @@ function Page ({ title, description, children }) {
 
           padding: 0 20px;
         }
+        main {
+          position: relative;
+          padding: 120px 20px 0 20px;
+        }
       `}</style>
     </div>
   )

@@ -35,15 +35,11 @@ export default function Home() {
       </Page>
 
       <style jsx>{`
-        main {
-          position: relative;
-          padding: 120px 20px 0 20px;
-        }
-        main .head {
+        .head {
           position: relative;
           padding: 20px 0;
         }
-        main .head .name {
+        .head .name {
           color: #000;
           font-size: 36px;
           font-weight: bold;
