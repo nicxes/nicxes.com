@@ -43,6 +43,10 @@ export default function Home() {
           align-items: center;
         }
         main .container {width: 100%;}
+        @media only screen and (max-width: 425px) {
+          main {max-height: 600px;}
+        }
+
         header {
           position: relative;
           padding: 20px 0;
