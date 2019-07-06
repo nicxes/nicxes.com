@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 import Page from '../components/page'
-import Navbar from '../components/navbar'
 import Logo from '../components/logo'
+import Navbar from '../components/navbar'
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Navbar/>
@@ -83,5 +83,3 @@ function Home() {
     </>
   )
 }
-
-export default Home
