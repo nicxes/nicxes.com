@@ -52,6 +52,11 @@ function Page ({ title, description, children }) {
 
           padding: 0 20px;
         }
+        ul.unstyled {
+          padding: 0;
+          margin: 0;
+        }
+        ul.unstyled li {list-style: none;}
       `}</style>
     </div>
   )
