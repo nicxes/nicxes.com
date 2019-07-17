@@ -18,9 +18,8 @@ export default function Home() {
 
             <ul className="navigation">
               <li><Link href="/who"><a>🧐 Who I am?</a></Link></li>
-              <li><Link href="/oss"><a>💼 OSS Contributions</a></Link></li>
-              <li><Link href="/press"><a>📰 Press</a></Link></li>
-              <li><Link href="/education"><a>🎓 Education</a></Link></li>
+              <li><Link href="/oss"><a>💼 Experiencie</a></Link></li>
+              <li><Link href="/press"><a>💾 OSS Contributions</a></Link></li>
               <li><Link href="/information"><a>👀 Information</a></Link></li>
             </ul>
 
