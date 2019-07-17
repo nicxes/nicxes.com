@@ -7,8 +7,6 @@ import Navbar from '../components/navbar'
 export default function Home() {
   return (
     <>
-      <Navbar/>
-
       <Page title="Nicxes — Homepage">
         <main>
           <div className="container">
