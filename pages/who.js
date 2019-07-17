@@ -31,9 +31,9 @@ export default function Who() {
           
             <aside>
               <ul className="unstyled">
-                <li><a href="/">Linkedin</a></li>
-                <li><a href="/">Github</a></li>
-                <li><a href="/">Email</a></li>
+                <li><a href="https://linkedin.com/in/nicxesh">Linkedin</a></li>
+                <li><a href="https://github.com/nicxes">Github</a></li>
+                <li><a href="mailto:nicxesh@gmail.com">Email</a></li>
               </ul>
             </aside>
           </header>
