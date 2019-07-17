@@ -14,22 +14,19 @@ export default function Who() {
           <header>
             <div>
               <span className="icon">🧐</span>
-              <h1>Who I am?</h1>
-              <p>Real Notion pages built by our team and community. Explore and duplicate any page below with one click so you can make it your own! Want to share your creations? Share them here so others can benefit from what you've built! ✌️</p>
+              <h1>About me</h1>
+              <p>I'm Nicolas Miranda, a UI developer from Buenos Aires, Argentina. I started learning to code and mod since I was a child out of sheer curiosity during my free time and it has fascinated me ever since. Difficult problems always seem to intrigue me into finding the perfect solutions. Also, I'm a big fan of Blizzard due to their amazing attention to details such as UI, music and lore; my most favorite genre is FPS. Currently, I'm looking for a job opportunity.</p>
               
               <h2>Skills</h2>
               <ul className="unstyled">
-                <li>Node.js</li>
-                <li>React.js [Next.js]</li>
-                <li>Deployment [Heroku/Now]</li>
-                <li>Git [Github/Gitlab]</li>
-                <li>CMS [Contentful/Prismic]</li>
-                <li>CSS [Less/Sass]</li>
-                <li>HTML [HTML5/Jade]</li>
+                <li>Web Development</li>
+                <li>Web Deployment</li>
+                <li>User Experience</li>
+                <li>Mobile First</li>
               </ul>
             </div>
           
-            <aside>
+            <aside className="hidden-mobile hidden-tablet">
               <ul className="unstyled">
                 <li><a href="https://linkedin.com/in/nicxesh">Linkedin</a></li>
                 <li><a href="https://github.com/nicxes">Github</a></li>
@@ -49,11 +46,15 @@ export default function Who() {
           grid-template-columns: 2fr 1fr;
           column-gap: 20px;
         }
+        @media only screen and (max-width: 768px) {
+          header {grid-template-columns: 1fr;}
+        }
         header .icon {
           font-size: 42px;
           display: block;
           margin: 20px 0;
         }
+
         aside {
           display: flex;
           align-items: flex-end;
@@ -70,6 +71,7 @@ export default function Who() {
           font-weight: 400;
           line-height: 25px;
         }
+        ul {margin: 0 0 20px 0;}
         ul li {margin: 8px 0;}
         hr {
           border: 1px solid rgba(55, 53, 47, 0.09);
