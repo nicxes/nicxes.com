@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Page from '../components/page'
 import Navbar from '../components/navbar'
 
-export default function Who() {
+export default function Exp() {
   return (
     <>
       <Navbar/>
@@ -13,24 +13,27 @@ export default function Who() {
           
           <header>
             <div>
-              <span className="icon">🧐</span>
-              <h1 className="mb-1">About me</h1>
-              <p className="mb-4">I'm Nicolas Miranda, a UI developer from Buenos Aires, Argentina. I started learning to code and mod since I was a child out of sheer curiosity during my free time and it has fascinated me ever since. Difficult problems always seem to intrigue me into finding the perfect solutions. Also, I'm a big fan of Blizzard due to their amazing attention to details such as UI, music and lore; my most favorite genre is FPS. Currently, I'm looking for a job opportunity.</p>
+              <span className="icon">💼</span>
+              <h1 className="mb-4">Experience</h1>
 
-              <h2>Skills</h2>
+              <h2 className="mb-1">UI Developer at Boopix</h2>
+              <p className="mb-4">As the design team lead, I am responsible for curating the visual experience of our brand and products. Being the first designer of the company, I was enabled to develop the design system that we are currently using. We have a growing team of designers and developers which I am now guiding daily in the creative process.</p>
+              
+              <h3 className="mb-1">I’m responsible for:</h3>
               <ul className="unstyled">
-                <li>Web Development</li>
-                <li>Web Deployment</li>
-                <li>User Experience</li>
-                <li>Mobile First</li>
+                <li>UI Developer</li>
+                <li>Wireframing</li>
+                <li>Release Videos / Announcements</li>
+                <li>Continually scaling the graphic system of ZEIT, Next.js and Hyper — among others</li>
+                <li>Improving the user experience and the graphic interface of the platform</li>
+                <li>Recruiting and hiring for the design team</li>
               </ul>
+
             </div>
           
             <aside className="hidden-mobile hidden-tablet">
               <ul className="unstyled">
-                <li><a href="https://linkedin.com/in/nicxesh" target="_blank">Linkedin</a></li>
-                <li><a href="https://github.com/nicxes" target="_blank">Github</a></li>
-                <li><a href="mailto:nicxesh@gmail.com" target="_blank">Email</a></li>
+                <li><a href="https://github.com/nicxes" target="_blank">Github repository</a></li>
               </ul>
             </aside>
           </header>
@@ -64,11 +67,13 @@ export default function Who() {
           font-size: 14px;
           font-weight: 400;
         }
+
         p {
           color: #333;
           font-weight: 400;
           line-height: 25px;
         }
+        ul li {color: #222;}
 
       `}</style>
     </>

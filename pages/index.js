@@ -18,8 +18,8 @@ export default function Home() {
 
             <ul className="navigation">
               <li><Link href="/who"><a>🧐 Who I am?</a></Link></li>
-              <li><Link href="/oss"><a>💼 Experiencie</a></Link></li>
-              <li><Link href="/press"><a>💾 OSS Contributions</a></Link></li>
+              <li><Link href="/experience"><a>💼 Experience</a></Link></li>
+              <li><Link href="/oss"><a>💾 OSS Contributions</a></Link></li>
               <li><Link href="/information"><a>👀 Information</a></Link></li>
             </ul>
 
@@ -58,7 +58,7 @@ export default function Home() {
         
         .navigation {
           padding: 0;
-          margin: 0;
+          margin: 0 0 20px 0;
         }
         .navigation li {
           list-style: none;

@@ -21,6 +21,10 @@ function Page ({ title, description, children }) {
       {children}
 
       <style global jsx>{`
+        * {
+          margin: 0;
+          padding: 0;
+        }
         body {
           color: #999;
           font-family: -apple-system, BlinkMacSystemFont, "SF Text", sans-serif;
@@ -31,8 +35,6 @@ function Page ({ title, description, children }) {
         h1, h2, h3, h4, h5, h6 {
           color: #222;
           font-family: -apple-system, BlinkMacSystemFont, "SF Display", sans-serif;
-
-          margin: 0 0 10px 0;
         }
         a {
           color: #222;
@@ -56,7 +58,19 @@ function Page ({ title, description, children }) {
           padding: 0;
           margin: 0;
         }
-        ul.unstyled li {list-style: none;}
+        ul.unstyled li {
+          list-style: none;
+          margin: 8px 0;
+        }
+
+        .mb-1 {margin-bottom: 10px !important;}
+        .mb-2 {margin-bottom: 20px !important;}
+        .mb-4 {margin-bottom: 40px !important;}
+
+        hr {
+          border: 1px solid rgba(55, 53, 47, 0.09);
+          margin: 60px 0;
+        }
 
         @media only screen and (max-width: 425px) {
           .hidden-mobile {display: none !important;}
