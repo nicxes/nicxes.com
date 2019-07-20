@@ -16,7 +16,7 @@ export default function Who() {
               <span className="icon">🧐</span>
               <h1>About me</h1>
               <p>I'm Nicolas Miranda, a UI developer from Buenos Aires, Argentina. I started learning to code and mod since I was a child out of sheer curiosity during my free time and it has fascinated me ever since. Difficult problems always seem to intrigue me into finding the perfect solutions. Also, I'm a big fan of Blizzard due to their amazing attention to details such as UI, music and lore; my most favorite genre is FPS. Currently, I'm looking for a job opportunity.</p>
-              
+
               <h2>Skills</h2>
               <ul className="unstyled">
                 <li>Web Development</li>
@@ -28,9 +28,9 @@ export default function Who() {
           
             <aside className="hidden-mobile hidden-tablet">
               <ul className="unstyled">
-                <li><a href="https://linkedin.com/in/nicxesh">Linkedin</a></li>
-                <li><a href="https://github.com/nicxes">Github</a></li>
-                <li><a href="mailto:nicxesh@gmail.com">Email</a></li>
+                <li><a href="https://linkedin.com/in/nicxesh" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/nicxes" target="_blank">Github</a></li>
+                <li><a href="mailto:nicxesh@gmail.com" target="_blank">Email</a></li>
               </ul>
             </aside>
           </header>
