@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Exp() {
+export default function Aside() {
   return (
     <>
       <aside className="hidden-mobile hidden-tablet">
