@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Page from '../components/page'
 import Navbar from '../components/navbar'
+import Aside from '../components/aside'
 
 export default function Exp() {
   return (
@@ -10,33 +11,30 @@ export default function Exp() {
 
       <Page title="Nicxes — Homepage">
         <main className="container-fluid">
-          
-          <header>
+
+          <section>
             <div>
               <span className="icon">💼</span>
               <h1 className="mb-4">Experience</h1>
 
+              <h4 className="mb-1">2017 - 2018</h4>
               <h2 className="mb-1">UI Developer at Boopix</h2>
-              <p className="mb-4">As the design team lead, I am responsible for curating the visual experience of our brand and products. Being the first designer of the company, I was enabled to develop the design system that we are currently using. We have a growing team of designers and developers which I am now guiding daily in the creative process.</p>
-              
-              <h3 className="mb-1">I’m responsible for:</h3>
-              <ul className="unstyled">
-                <li>UI Developer</li>
-                <li>Wireframing</li>
-                <li>Release Videos / Announcements</li>
-                <li>Continually scaling the graphic system of ZEIT, Next.js and Hyper — among others</li>
-                <li>Improving the user experience and the graphic interface of the platform</li>
-                <li>Recruiting and hiring for the design team</li>
+              <p className="mb-2">My primary responsibility in the project was developed and maintained the UI from Zeplin to HTML/SASS using Bootstrap v3 and Gitlab for version control making reusable assets and components for future updates if necessary. My top priority are mobile-first, accessibility and user experience.</p>
+            
+              <ul className="media unstyled">
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/6QDxZvEOZPLgeaD6FjSVy3;1326x800.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/lHEJ24Eyg4rbKFpE6JK7dB;1280x773.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/1eGJ9juajJAcuR5LLKBLXY;1194x800.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/jp1NLKBijMyfAVEVTWOUTp;990x800.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/0ob69YMQlbCb2PFSNulmGQ;923x800/lossless.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/0ob69YMQlbCb2PFSNulmGQ;923x800/lossless.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/2HyxAppLoCRbOxtG8cTc61;888x800/lossless.webp"/></li>
+                <li><img src="https://carbon-media.accelerator.net/0000000i0w8/klU4n3ADKK8e5TuFu8vTAI;1280x698.webp"/></li>
               </ul>
-
             </div>
           
-            <aside className="hidden-mobile hidden-tablet">
-              <ul className="unstyled">
-                <li><a href="https://github.com/nicxes" target="_blank">Github repository</a></li>
-              </ul>
-            </aside>
-          </header>
+            <Aside/>
+          </section>
 
           <hr/>
 
@@ -44,37 +42,35 @@ export default function Exp() {
       </Page>
 
       <style jsx>{`
-        header {
+        section {
           display: grid;
           grid-template-columns: 2fr 1fr;
           column-gap: 20px;
         }
         @media only screen and (max-width: 768px) {
-          header {grid-template-columns: 1fr;}
+          section {grid-template-columns: 1fr;}
         }
-        header .icon {
+        section .icon {
           font-size: 42px;
           display: block;
           margin: 20px 0;
         }
-
-        aside {
-          display: flex;
-          align-items: flex-end;
-        }
-        aside a {
-          color: #999;
-          font-size: 14px;
-          font-weight: 400;
-        }
-
         p {
           color: #333;
           font-weight: 400;
           line-height: 25px;
         }
-        ul li {color: #222;}
-
+        .media {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          column-gap: 20px;
+        }
+        .media li:first-child {grid-column: 1 / -1;}
+        .media li {cursor: zoom-in;}
+        .media li img {
+          border: 1px solid #eee;
+          width: 100%;
+        }
       `}</style>
     </>
   )
