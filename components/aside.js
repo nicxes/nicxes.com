@@ -14,6 +14,7 @@ export default function Exp() {
           </ul>
 
           <ul className="unstyled">
+            <li><a href="https://github.com/nicxes/boopix" target="_blank">Live Preview</a></li>
             <li><a href="https://github.com/nicxes/boopix" target="_blank">Github repository</a></li>
           </ul>
         </div>
