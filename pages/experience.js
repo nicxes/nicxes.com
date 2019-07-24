@@ -45,7 +45,7 @@ export default function Exp() {
         section {
           display: grid;
           grid-template-columns: 2fr 1fr;
-          column-gap: 20px;
+          column-gap: 40px;
         }
         @media only screen and (max-width: 768px) {
           section {grid-template-columns: 1fr;}
