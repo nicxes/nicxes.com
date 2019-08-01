@@ -43,7 +43,7 @@ function Page ({ title, description, children }) {
           transition: 0.1s all ease-in;
         }
         .container {
-          max-width: 600px;
+          max-width: 420px;
           margin: 0 auto;
 
           padding: 0 20px;
