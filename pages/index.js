@@ -40,9 +40,6 @@ export default function Home() {
           align-items: center;
         }
         main .container {width: 100%;}
-        @media only screen and (max-width: 425px) {
-          main {max-height: 600px;}
-        }
 
         header {
           position: relative;
@@ -83,6 +80,11 @@ export default function Home() {
         footer p a {
           color: #999;
           text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 425px) {
+          main {max-height: 600px;}
+          header {text-align: center;}
         }
       `}</style>
     </>
