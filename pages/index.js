@@ -17,10 +17,10 @@ export default function Home() {
             </header>
 
             <ul className="navigation">
-              <li><a href="https://www.notion.so/nicxes/Who-I-am-2547483a7bca43feb829f311bc8f3b5a">🧐 Who I am?</a></li>
-              <li><Link href="/experience"><a>💼 Experience</a></Link></li>
-              <li><Link href="/oss"><a>💾 OSS Contributions</a></Link></li>
-              <li><Link href="/information"><a>👀 Information</a></Link></li>
+              <li><Link href="/"><a>🕹️ Overwatch</a></Link></li>
+              <li><Link href="/"><a>📺 Watchlist</a></Link></li>
+              <li><Link href="/"><a>💾 Playground</a></Link></li>
+              <li><a href="https://www.notion.so/nicxes/Who-I-am-2547483a7bca43feb829f311bc8f3b5a">👀 Information</a></li>
             </ul>
 
             <footer>
