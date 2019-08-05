@@ -6,8 +6,8 @@ function Page ({ title, description, children }) {
       <Head>
         <title>{title || 'Nicxes'}</title>
 
-        <meta name="description" content={description || 'Nicxes'} />
-        <meta name="keywords" content="Nicxes"/>
+        <meta name="description" content={description || 'UI Developer — from Buenos Aires, Argentina. Got more questions? Email me at hello@nicxes.com'} />
+        <meta name="keywords" content="Nicxes, nicxes, nxs, nico, nicxes.com, nxs.sh, nico.sh, nicxes.dev"/>
         <meta name="author" content="@Nicxes"/>
         
         <meta name="theme-color" content="#000000"/>
