@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import Page from '../components/page'
 import Logo from '../components/logo'
-import Navbar from '../components/navbar'
 
 export default function Home() {
   return (
