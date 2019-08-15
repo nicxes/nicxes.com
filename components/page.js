@@ -62,6 +62,9 @@ function Page ({ title, description, children }) {
           list-style: none;
           margin: 8px 0;
         }
+        p {
+          margin-top: 0;
+        }
 
         .mb-1 {margin-bottom: 10px !important;}
         .mb-2 {margin-bottom: 20px !important;}
