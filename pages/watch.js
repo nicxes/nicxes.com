@@ -4,8 +4,6 @@ import Page from '../components/page'
 import Logo from '../components/logo'
 import Stars from '../components/zeit/stars'
 
-import '../static/zeit-ui.css'
-
 export default class Watch extends React.Component {
   static async getInitialProps () {
     const res = await fetch('https://api.jikan.moe/v3/user/nicxes/animelist/')
