@@ -31,12 +31,12 @@ export default function Home() {
       <style jsx>{`
         .zi-main {
           position: relative;
+          background: #fff;
           width: 100%;
           height: 100vh;
 
           display: flex;
           align-items: center;
-          
         }
         .zi-layout {
           display: flex;
