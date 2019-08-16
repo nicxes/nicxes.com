@@ -2,41 +2,47 @@ import fetch from 'isomorphic-unfetch'
 
 import Page from '../components/page'
 import Logo from '../components/logo'
+
 import Stars from '../components/zeit/stars'
 
 export default class Watch extends React.Component {
-  static async getInitialProps () {
-    const res = await fetch('https://api.jikan.moe/v3/user/nicxes/animelist/')
-    const json = await res.json()
-    
-    return {
-      animes: json.anime
+  constructor() {
+    super()
+
+    this.state = {
+      animes: []
     }
   }
-  
+  componentDidMount() {
+    fetch('https://api.jikan.moe/v3/user/nicxes/animelist/')
+      .then( r => r.json() )
+      .then( data => {
+        console.log(data)
+        this.setState({animes: data.anime})
+      })
+  }
   render() {
     return (
       <>
         <Page title="Nicxes - Watchlist">
-          <main className="zi-main">
-            <div className="zi-layout">
+          <main className="zi-main zi-layout">
 
-              <header>
-                <div className="left">
-                  <div className="zi-avatar huge square">
-                    <Logo/>
-                  </div>
-                  <h1>Watchlist</h1>
-                  <p className="zi-subheading">Using Jikan a Unofficial MyAnimeList API.</p>
+            <header>
+              <div>
+                <div className="zi-avatar huge square">
+                  <Logo/>
                 </div>
+                <h1 className="name">Watchlist</h1>
+                <p className="description zi-subheading">Using Jikan a Unofficial MyAnimeList API.</p>
+              </div>
 
-                <div className="right">
-                  <input className="zi-input big search" placeholder="Search anime" spellCheck="false"/>
-                  <p className="zi-comment">Showing {this.props.animes.length} results from Nicxes</p>
-                </div>
-              </header>
+              <div>
+                <input className="zi-input big search" placeholder="Search anime" spellCheck="false"/>
+                <p className="zi-comment results">Showing {this.state.animes.length} results from Nicxes</p>
+              </div>
+            </header>
 
-              <table className="zi-table">
+            <table className="zi-table">
 
                 <thead>
                   <tr>
@@ -50,7 +56,7 @@ export default class Watch extends React.Component {
                 </thead>
 
                 <tbody>
-                  {this.props.animes.map(anime => 
+                  {this.state.animes.map(anime => 
                     <tr key={anime.mal_id}>
                       <td>
                         <img src={anime.image_url} className="zi-avatar square"/>
@@ -59,10 +65,10 @@ export default class Watch extends React.Component {
                       <td>{anime.title}</td>
                       <td>
                         {
-                          anime.watching_status == 2 ? <span>Completed</span> :
-                          anime.watching_status == 3 ? <span>On Hold</span> :
-                          anime.watching_status == 6 ? <span>Plan to Watch</span> :
-                          <span>Error</span>
+                          anime.watching_status == 2 ? <span className="zi-tag success">Completed</span> :
+                          anime.watching_status == 3 ? <span className="zi-tag warning">On Hold</span> :
+                          anime.watching_status == 6 ? <span className="zi-tag">Plan to Watch</span> :
+                          <span className="zi-tag danger">Error</span>
                         }
                       </td>
                       <td className="zi-rate">
@@ -72,32 +78,41 @@ export default class Watch extends React.Component {
                   )}
                 </tbody>
 
-              </table>
+            </table>
 
-            </div>
           </main>
         </Page>
 
         <style jsx>{`
           header {
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 2fr 1fr;
             align-items: center;
-            padding: 60px 0 40px 0;
+            padding: 60px 0 30px 0;
           }
+          header .name {margin: 20px 0 0 0;}
+          header .description {margin: 0 0 20px 0;}
+
+          @media only screen and (max-width: 425px) {
+            header {
+              grid-template-columns: 1fr;
+              text-align: center;
+            }
+          }
+
           .zi-layout {
             display: flex;
             flex-direction: column;
 
-
-            max-width: 90%;
             width: auto;
             min-width: 0;
+            max-width: 90%;
           }
           .search {
             width: 100%;
             margin: 4px 0;
           }
+          .results {margin: 0;}
         `}</style>
       </>
     )
