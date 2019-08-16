@@ -19,7 +19,7 @@ export default class Watch extends React.Component {
       <>
         <Page title="Nicxes - Watchlist">
           <main className="zi-main">
-            <div className="container-fluid">
+            <div className="zi-layout">
 
               <header>
                 <div className="left">
@@ -84,6 +84,15 @@ export default class Watch extends React.Component {
             grid-template-columns: 3fr 1fr;
             align-items: center;
             padding: 60px 0 40px 0;
+          }
+          .zi-layout {
+            display: flex;
+            flex-direction: column;
+
+
+            max-width: 90%;
+            width: auto;
+            min-width: 0;
           }
           .search {
             width: 100%;
