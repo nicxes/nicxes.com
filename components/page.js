@@ -28,6 +28,7 @@ export default function Page ({ title, description, children }) {
         ul.unstyled li::before {
           content: none;
         }
+        
       `}</style>
     </div>
   )
