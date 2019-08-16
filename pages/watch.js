@@ -3,7 +3,7 @@ import fetch from 'isomorphic-unfetch'
 import Page from '../components/page'
 import Logo from '../components/logo'
 
-import Stars from '../components/zeit/stars'
+import Anime from '../components/anime'
 
 export default class Watch extends React.Component {
   constructor() {
@@ -19,6 +19,9 @@ export default class Watch extends React.Component {
       .then( data => {
         console.log(data)
         this.setState({animes: data.anime})
+      })
+      .catch( err => {
+        console.log(err)
       })
   }
   render() {
@@ -38,46 +41,25 @@ export default class Watch extends React.Component {
 
               <div>
                 <input className="zi-input big search" placeholder="Search anime" spellCheck="false"/>
-                <p className="zi-comment results">Showing {this.state.animes.length} results from Nicxes</p>
+                <span className="zi-comment results">Showing {this.state.animes.length} results from Nicxes</span>
               </div>
             </header>
 
             <table className="zi-table">
+              <thead>
+                <tr>
+                  <th className="picture"></th>
+                  <th>Type</th>
 
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Type</th>
+                  <th>Name</th>
+                  <th>Progress</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
 
-                    <th>Name</th>
-                    <th>Progress</th>
-                    <th>Score</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {this.state.animes.map(anime => 
-                    <tr key={anime.mal_id}>
-                      <td>
-                        <img src={anime.image_url} className="zi-avatar square"/>
-                      </td>
-                      <td>{anime.type}</td>
-                      <td>{anime.title}</td>
-                      <td>
-                        {
-                          anime.watching_status == 2 ? <span className="zi-tag success">Completed</span> :
-                          anime.watching_status == 3 ? <span className="zi-tag warning">On Hold</span> :
-                          anime.watching_status == 6 ? <span className="zi-tag">Plan to Watch</span> :
-                          <span className="zi-tag danger">Error</span>
-                        }
-                      </td>
-                      <td className="zi-rate">
-                        <Stars score={anime.score}/>
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-
+              <tbody>
+                <Anime animes={this.state.animes}/>
+              </tbody>
             </table>
 
           </main>
@@ -98,6 +80,12 @@ export default class Watch extends React.Component {
               grid-template-columns: 1fr;
               text-align: center;
             }
+            .picture {display: none;}
+          }
+
+          table {
+            overflow: auto;
+            white-space: nowrap;
           }
 
           .zi-layout {
@@ -112,7 +100,6 @@ export default class Watch extends React.Component {
             width: 100%;
             margin: 4px 0;
           }
-          .results {margin: 0;}
         `}</style>
       </>
     )
