@@ -1,6 +1,6 @@
 import Score from './score'
 
-export default function Anime({ animes, search }) {
+export default function Table({ animes, search }) {
   return (
     <>
       <table className="zi-table">
