@@ -1,6 +1,6 @@
 import Score from './score'
 
-export default function Anime({ animes }) {
+export default function Anime({ animes, search }) {
   return (
     <>
       <table className="zi-table">
@@ -15,7 +15,9 @@ export default function Anime({ animes }) {
         </thead>
 
         <tbody>
-          {animes.map((anime, key) => 
+          {animes.filter(anime =>
+            anime.title.toLowerCase().includes(search.toLowerCase())
+            ).map(anime => 
             <tr key={anime.mal_id}>
               <td className="picture"><img src={anime.image_url} className="zi-avatar square"/></td>
               <td className="type"><span className="zi-comment">{anime.type}</span></td>
@@ -38,12 +40,6 @@ export default function Anime({ animes }) {
           )}
         </tbody>
       </table>
-
-      <style jsx>{`
-        @media only screen and (max-width: 425px) {
-          
-        }
-      `}</style>
     </>
   )
 }
