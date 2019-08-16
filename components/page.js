@@ -21,12 +21,6 @@ export default function Page ({ title, description, children }) {
       {children}
 
       <style global jsx>{`
-        .container-fluid {
-          max-width: 90%;
-          margin: 0 auto;
-
-          padding: 0 20px;
-        }
         ul.unstyled {
           margin: 0;
           padding: 0;
