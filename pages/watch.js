@@ -1,9 +1,10 @@
 import fetch from 'isomorphic-unfetch'
+import LazyLoad from 'react-lazyload'
 
 import Page from '../components/page'
 import Logo from '../components/logo'
 
-import Anime from '../components/anime'
+import Table from '../components/Table'
 
 export default class Watch extends React.Component {
   constructor() {
@@ -17,7 +18,6 @@ export default class Watch extends React.Component {
     fetch('https://api.jikan.moe/v3/user/nicxes/animelist/')
       .then( r => r.json() )
       .then( data => {
-        console.log(data)
         this.setState({animes: data.anime})
       })
       .catch( err => {
@@ -45,22 +45,9 @@ export default class Watch extends React.Component {
               </div>
             </header>
 
-            <table className="zi-table">
-              <thead>
-                <tr>
-                  <th className="picture"></th>
-                  <th>Type</th>
-
-                  <th>Name</th>
-                  <th>Progress</th>
-                  <th>Score</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <Anime animes={this.state.animes}/>
-              </tbody>
-            </table>
+            <LazyLoad height={800} once>
+              <Table animes={this.state.animes}/>
+            </LazyLoad>
 
           </main>
         </Page>
@@ -80,12 +67,6 @@ export default class Watch extends React.Component {
               grid-template-columns: 1fr;
               text-align: center;
             }
-            .picture {display: none;}
-          }
-
-          table {
-            overflow: auto;
-            white-space: nowrap;
           }
 
           .zi-layout {
