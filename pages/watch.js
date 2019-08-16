@@ -44,7 +44,7 @@ export default class Watch extends React.Component {
             </header>
 
             <LazyLoad height={800} once>
-              <Table animes={this.state.animes}/>
+              <Table animes={this.state.animes} search={this.state.search}/>
             </LazyLoad>
 
           </main>
