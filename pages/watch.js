@@ -4,7 +4,7 @@ import LazyLoad from 'react-lazyload'
 import Page from '../components/page'
 import Logo from '../components/logo'
 import Search from '../components/search'
-import Table from '../components/Table'
+import Table from '../components/table'
 
 export default class Watch extends React.Component {
   constructor() {
