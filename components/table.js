@@ -6,8 +6,8 @@ export default function Anime({ animes }) {
       <table className="zi-table">
         <thead>
           <tr>
-            <th className="picture"></th>
-            <th className="type">Type</th>
+            <th></th>
+            <th>Type</th>
             <th>Name</th>
             <th>Progress</th>
             <th>Score</th>
@@ -19,7 +19,7 @@ export default function Anime({ animes }) {
             <tr key={anime.mal_id}>
               <td className="picture"><img src={anime.image_url} className="zi-avatar square"/></td>
               <td className="type"><span className="zi-comment">{anime.type}</span></td>
-              <td className="title">{anime.title}</td>
+              <td className="title"><a href={anime.url} target="_blank">{anime.title}</a></td>
               <td className="status">
                 {
                   anime.watching_status == 1 ? <span className="zi-tag">Currently Watching</span> :
