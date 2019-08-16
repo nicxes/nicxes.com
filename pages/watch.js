@@ -3,7 +3,7 @@ import LazyLoad from 'react-lazyload'
 
 import Page from '../components/page'
 import Logo from '../components/logo'
-
+import Search from '../components/search'
 import Table from '../components/Table'
 
 export default class Watch extends React.Component {
@@ -11,7 +11,8 @@ export default class Watch extends React.Component {
     super()
 
     this.state = {
-      animes: []
+      animes: [],
+      search: ""
     }
   }
   componentDidMount() {
@@ -39,10 +40,7 @@ export default class Watch extends React.Component {
                 <p className="description zi-subheading">Using Jikan a Unofficial MyAnimeList API.</p>
               </div>
 
-              <div>
-                <input className="zi-input big search" placeholder="Search anime" spellCheck="false"/>
-                <span className="zi-comment results">Showing {this.state.animes.length} results from Nicxes</span>
-              </div>
+              <Search animes={this.state.animes} InputChange={text => this.setState({search: text})}/>
             </header>
 
             <LazyLoad height={800} once>
@@ -53,6 +51,15 @@ export default class Watch extends React.Component {
         </Page>
 
         <style jsx>{`
+          .zi-layout {
+            display: flex;
+            flex-direction: column;
+
+            width: auto;
+            min-width: 0;
+            max-width: 90%;
+          }
+
           header {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -67,19 +74,6 @@ export default class Watch extends React.Component {
               grid-template-columns: 1fr;
               text-align: center;
             }
-          }
-
-          .zi-layout {
-            display: flex;
-            flex-direction: column;
-
-            width: auto;
-            min-width: 0;
-            max-width: 90%;
-          }
-          .search {
-            width: 100%;
-            margin: 4px 0;
           }
         `}</style>
       </>
