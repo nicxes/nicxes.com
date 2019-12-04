@@ -16,14 +16,14 @@ export default class Watch extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('https://api.jikan.moe/v3/user/nicxes/animelist/')
-      .then( r => r.json() )
-      .then( data => {
-        this.setState({animes: data.anime})
-      })
-      .catch( err => {
-        console.log(err)
-      })
+    fetch('https://api.jikan.moe/v3/user/nicxes/animelist/all')
+    .then( r => r.json() )
+    .then( data => {
+      this.setState({animes: data.anime})
+    })
+    .catch( err => {
+      console.log(err)
+    })
   }
   render() {
     return (
