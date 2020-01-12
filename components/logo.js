@@ -1,3 +1,3 @@
 export default ({size}) => (
-  <img src="/static/logo.png" alt="Nicxes" height={size}/>
+  <img src="/logo.png" alt="Nicxes" height={size}/>
 )
