@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import '../static/zeit-ui.css'
+import '@zeit-ui/style'
 
 export default function Page ({ title, description, children }) {
   return (

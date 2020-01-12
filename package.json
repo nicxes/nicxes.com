@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nicxes/nicxes.com#readme",
   "dependencies": {
+    "@zeit-ui/style": "^0.9.3",
     "@zeit/next-css": "^1.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.3",
