@@ -1,80 +1,83 @@
-import Link from 'next/link'
+import Head from 'next/head'
+import Image from 'next/image'
 
-import Page from '../components/page'
-import Logo from '../components/logo'
+export default function Homepage() {
+	return (
+		<div className="flex min-h-screen flex-col items-center justify-center py-2">
+			<Head>
+				<title>Create Next App</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-export default function Home() {
-  return (
-    <>
-      <Page title="Nicxes — Homepage">
-        <main className="zi-main">
-          <div className="zi-layout">
+			<main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+				<h1 className="text-6xl font-bold">
+					Welcome to{' '}
+					<a className="text-blue-600" href="https://nextjs.org">
+						Next.js!
+					</a>
+				</h1>
 
-            <div className="avatar">
-              <Logo size="140"/>
-            </div>
-          
-            <h1 className="name">Nicxes</h1>
+				<p className="mt-3 text-2xl">
+					Get started by editing{' '}
+					<code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
+						pages/index.tsx
+					</code>
+				</p>
 
-            <ul className="unstyled">
-              <li><a href="https://www.notion.so/nicxes/UI-Developer-at-Boopix-66d482f92cd14de8bf3b95ff1b6d7136" target="_blank">💼 Experience</a></li>
-              <li><a>💾 OSS Projects</a></li>
-              <li><Link href="/watch"><a>📺 Watch</a></Link></li>
-              <li><a href="https://www.notion.so/nicxes/Information-2547483a7bca43feb829f311bc8f3b5a" target="_blank">👀 Information</a></li>
-            </ul>
+				<div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
+					<a
+						href="https://nextjs.org/docs"
+						className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+					>
+						<h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+						<p className="mt-4 text-xl">
+							Find in-depth information about Next.js features and its API.
+						</p>
+					</a>
 
-            <p className="contact zi-comment">Got more questions? <br/> Email me at <a href="mailto:nicxesh@gmail.com">nicxesh@gmail.com</a></p>
-          </div>
-        </main>
-      </Page>
+					<a
+						href="https://nextjs.org/learn"
+						className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+					>
+						<h3 className="text-2xl font-bold">Learn &rarr;</h3>
+						<p className="mt-4 text-xl">
+							Learn about Next.js in an interactive course with quizzes!
+						</p>
+					</a>
 
-      <style jsx>{`
-        .zi-main {
-          position: relative;
-          background: #fff;
-          width: 100%;
-          height: 100vh;
+					<a
+						href="https://github.com/vercel/next.js/tree/canary/examples"
+						className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+					>
+						<h3 className="text-2xl font-bold">Examples &rarr;</h3>
+						<p className="mt-4 text-xl">
+							Discover and deploy boilerplate example Next.js projects.
+						</p>
+					</a>
 
-          display: flex;
-          align-items: center;
-        }
-        .zi-layout {
-          display: flex;
-          flex-direction: column;
+					<a
+						href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+						className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+					>
+						<h3 className="text-2xl font-bold">Deploy &rarr;</h3>
+						<p className="mt-4 text-xl">
+							Instantly deploy your Next.js site to a public URL with Vercel.
+						</p>
+					</a>
+				</div>
+			</main>
 
-          max-width: 420px;
-          min-width: 0;
-        }
-        .name {
-          margin: 10px 0;
-        }
-        ul li {
-          margin: 0;
-          border-top: 1px solid #e4e3e2;
-        }
-        ul li a {
-          color: #222;
-          font-size: 16px;
-
-          display: block;
-          padding: 10px 5px;
-        }
-        ul li a:hover {
-          background: #eee;
-          text-decoration: none;
-        }
-
-        .contact {
-          font-size: 14px;
-        }
-
-        @media only screen and (max-width: 425px) {
-          .avatar,
-          .name {
-            text-align: center;
-          }
-        }
-      `}</style>
-    </>
-  )
+			<footer className="flex h-24 w-full items-center justify-center border-t">
+				<a
+					className="flex items-center justify-center gap-2"
+					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Powered by{' '}
+					<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+				</a>
+			</footer>
+		</div>
+	)
 }
